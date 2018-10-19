@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Rodrick Bloomfield',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -17,5 +17,13 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    'gatsby-transformer-json',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name:'data',
+        path: `${__dirname}/src/data`
+      }
+    }
   ],
 }
